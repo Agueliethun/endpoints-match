@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+message MatchRecord {
+	message PlayerRecord {
+		message AbilityRecord {
+			optional string name = 1;
+			optional int32 level = 2;
+		}
+
+		optional int32 steamid = 1;
+		optional int32 kills = 2;
+		optional int32 deaths = 3;
+		optional int32 assists = 4;
+
+		repeated AbilityRecord abilities = 5;
+
+		optional int32 team = 6;
+	}
+
+	optional string match_id = 1;
+	optional int64 date = 2;
+	optional string patch = 3;
+	optional int32 settings = 4;
+	repeated PlayerRecord player = 5;
+}
