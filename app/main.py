@@ -58,7 +58,7 @@ def addMatch():
 
   project_id = 'website-project-1-256917'
   dataset_id = 'match_history'
-  table_id = 'match'
+  table_id = 'matches'
 
   write_client = bigquery_storage_v1.BigQueryWriteClient()
   parent = write_client.table_path(project_id, dataset_id, table_id)
