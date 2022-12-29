@@ -24,6 +24,7 @@ schemes:
 paths:
   "/match":
     post:
+      operationId: "MatchAdd"
       description: "Add a match to the database."
       parameters:
         - name: matchData
