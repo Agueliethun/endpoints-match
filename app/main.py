@@ -26,7 +26,7 @@ import match_pb2
 
 app = Flask(__name__)
 
-def createRowFromRequest(request)
+def createRowFromRequest(request):
   row = match_pb2.MatchRecord()
   row.date = request.form['date']
   row.patch = request.form['patch']
